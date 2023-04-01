@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.quiz_app{
+    margin: 20px auto;
+    background-color: #f8f8f8;
+    padding: 15px;
+}
+
+@media(min-width:991px){
+    .quiz_app{
+        width: 800px;
+    }
+}
+.quiz_app .quiz_info{
+    display: flex;
+    background-color: #fff;
+    padding: 20px;
+    justify-content: space-between;
+}
+.quiz_app .quiz_area{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 15px;
+}
+.quiz_app .quiz_area h2{
+    margin: 0;
+}
+.quiz_app .answer_area{
+    padding: 0 20px 20px;
+    background-color: #fff;
+}
+.quiz_app .answer_area .answer{
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+.quiz_app .answer_area .answer:not(:last-child){
+    border-bottom: 1px solid #dfdfdf;
+}
+.quiz_app .answer_area .answer input[type="Radio"]:checked + label{
+    color: #0075ff;
+}
+.quiz_app .answer_area .answer label{
+    color: #777;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
+.quiz_app .submit-btn{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #0075ff;
+    border-radius: 6px;
+    margin: 20px auto;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.quiz_app .submit-btn:focus{
+    outline: none;
+}
+.quiz_app .bullets{
+    display: flex;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #dfdfdf;
+}
+.quiz_app .bullets .spans{
+    flex: 1;
+    display: flex;
+    
+}
+.quiz_app .bullets .spans span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 5px;
+}
+.quiz_app .bullets .spans span.on{
+    background-color: #0075ff;
+}
+.quiz_app .results span{
+    font-weight: bold;
+}
+.quiz_app .results span.bad{
+    color: #dc0a0a;
+}
+.quiz_app .results span.good{
+    color: #009688;    
+}
+.quiz_app .results span.perfect{
+    color: #0075ff;
+}
